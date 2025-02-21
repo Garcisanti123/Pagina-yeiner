@@ -1,0 +1,540 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animación de entrada para toda la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3a89c9, #6d3a8f); /* Escalas de azul y morado */
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de desvanecimiento al cargar la página */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Encabezado */
+.header {
+    position: relative;
+    background: linear-gradient(135deg, #6c4dbf, #4e93d1);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 5px solid #33a4d9;
+    animation: slideIn 2s ease-out;
+    overflow: hidden;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Animación de deslizamiento y entrada */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fondo parallax */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1920x1080/?nature,sky,landscape') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    transform: scale(1.1);
+    animation: parallaxBackground 10s infinite linear;
+}
+
+/* Efecto parallax para el fondo */
+@keyframes parallaxBackground {
+    0% {
+        transform: scale(1.1) translateY(0);
+    }
+    50% {
+        transform: scale(1.1) translateY(-20px);
+    }
+    100% {
+        transform: scale(1.1) translateY(0);
+    }
+}
+
+.header h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    animation: textColorChange 4s ease-in-out infinite;
+}
+
+/* Animación de cambio de color del texto */
+@keyframes textColorChange {
+    0% {
+        color: #f8e71c;
+    }
+    50% {
+        color: #ffb600;
+    }
+    100% {
+        color: #f8e71c;
+    }
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 15px;
+    opacity: 0.8;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Animación de aparición del slogan */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Agregar un efecto hover sobre el título */
+.header h1:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo de la sección de perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #7b5fbb, #4c88bf);
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInSection 2s forwards;
+}
+
+/* Animación para la sección del perfil */
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-image img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 4px solid #f8e71c;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1); /* Efecto de hover para hacer la imagen más grande */
+}
+
+.bio {
+    max-width: 600px;
+    margin-left: 40px;
+    color: #fff;
+}
+
+.bio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #f8e71c;
+}
+
+.bio p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Imagen a los lados de Sulley */
+.side-image img {
+    width: 200px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.side-image img:hover {
+    transform: scale(1.1); /* Efecto de hover para la imagen */
+}
+
+/* Sección de propuestas */
+.proposals {
+    padding: 40px;
+    background: linear-gradient(135deg, #6d3a8f, #3a89c9); /* Cambié los colores para que se asemejen a los de Sulley */
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInSection 2s forwards;
+}
+
+.proposals h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f8e71c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Lista de propuestas */
+.proposals ul {
+    list-style: none;
+    text-align: center;
+}
+
+.proposals li {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: linear-gradient(135deg, #5c3d7d, #4c88bf);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInProposal 1.5s forwards;
+}
+
+@keyframes fadeInProposal {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.proposals li:hover {
+    background: linear-gradient(135deg, #9b60ad, #33a4d9);
+    color: #fff;
+    transform: scale(1.05); /* Aumento de tamaño al pasar el mouse */
+}
+
+/* Estilos para el botón de "Ver más" */
+.toggle-btn {
+    background-color: #f8e71c;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInButton 2s 0.5s forwards;
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.toggle-btn:hover {
+    background-color: #ffb600;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilo de la sección extra de información */
+.extra-info {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 10px;
+    margin-top: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease, margin-top 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.extra-info.show {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    font-size: 1rem; /* Tamaño de letra base */
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Agregar un efecto para la transición de visibilidad del botón */
+.toggle-btn.show {
+    transform: scale(1.05);
+}
+
+h5 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f8e71c;
+}
+
+.expandable-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: visible; /* Cambiamos a visible para asegurar que la flecha no se corte */
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative; /* Añadimos posición relativa al contenedor */
+}
+
+.image-container {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.big-image {
+    width: 400px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.toggle-info {
+    position: absolute;
+    top: 50%;
+    right: -30px; /* Ajustamos la posición inicial */
+    transform: translateY(-50%);
+    background: rgb(189, 138, 202);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: right 0.5s ease-in-out;
+    z-index: 10; /* Aseguramos que la flecha esté encima de otros elementos */
+}
+
+.biography {
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    white-space: nowrap; /* Prevent wrapping */
+}
+.biography.show {
+    max-width: 400px;
+    opacity: 1;
+    white-space: normal; /* Allow wrapping when visible */
+    margin-left: 70px;
+}
+
+.game-section {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+}
+#game-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, #ddd, #bbb);
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+#target {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, red, darkred);
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, left 0.3s, top 0.3s;
+}
+#target:hover {
+    transform: scale(1.1);
+}
+#game-over {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+#reaction-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#reaction-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+#reaction-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        padding: 80px 20px;
+    }
+    .header h1 {
+        font-size: 3rem;
+    }
+    .slogan {
+        font-size: 1.2rem;
+    }
+    .profile {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .profile-image img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .bio {
+        margin-left: 0;
+        text-align: center;
+    }
+    .bio h2 {
+        font-size: 2rem;
+    }
+    .side-image {
+        display: none; /* Ocultar imágenes laterales en pantallas pequeñas */
+    }
+    .proposals {
+        padding: 30px;
+    }
+    .proposals h2 {
+        font-size: 2rem;
+    }
+    .proposals li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .big-image{
+        width: 250px;
+    }
+    .biography.show{
+        max-width: 250px;
+    }
+    .toggle-info{
+        right: 10px;
+    }
+}
+
+/* Para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .header {   
+        padding: 60px 15px;
+    }
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .slogan {
+        font-size: 1rem;
+    }
+    .profile-image img {
+        width: 150px;
+    }
+    .bio h2 {
+        font-font-size: 1.8rem;
+    }
+    .proposals ul {
+        padding: 0 10px;
+    }
+    .toggle-info{
+        right: 5px;
+    }
+    .biography{
+        margin-left: 0;
+    }
+    .biography.show{
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .extra-info.show {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .extra-info.show {
+        max-height: 150px;
+    }
+}
+
+#profile-image {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#profile-image.hidden {
+    opacity: 0;
+}
+
+
