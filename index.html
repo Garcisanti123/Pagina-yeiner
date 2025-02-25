@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación de Personero - Yeiner </title>
+    <title>Presentación de Personero - Yeiner y Eliezer</title>
     <link rel="stylesheet" href="Styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">¡CONOCE A TU MEJOR OPCIÓN 01!</h1>
+        <h1 class="header-title">¡CONOCE A TUS MEJORES OPCIÓNES 01!</h1>
         <p class="slogan">"Si al San José quieres mejorar con Yeiner lo podras lograr"</p>
+        <p class="slogan">"Con control y transparencia, avanzamos con potencia"</p>
     </header>
-    
+
     <section class="profile">
         <div class="profile-image">
             <img src="img/imagen3.jfif" alt="Sullivan de Monsters Inc.">
@@ -25,50 +26,46 @@
             <img src="img/imagen2.png" alt="Imagen de Sulley">
         </div>
     </section>
-    
 
     <section class="proposals">
-        <h2>Mis Propuestas</h2>
+        <h2>Mis Propuestas (Yeiner)</h2>
         <ul>
             <li>
                 <strong>Torneos relámpagos</strong>
-                <button class="toggle-btn" onclick="toggleInfo('proposal1')">Ver más</button>
-                <div class="extra-info" id="proposal1">
-                    <p>Se hará torneos por cada deporte como el fútbol, vóleibol, bastekbool, ajedrez y e.t.c. Se harán por categorías y por deportes, al equipo ganar se le va dar premios y reconocimientos. 
-                        Los recursos para esta propuesta se sacaran con actividades económicas</p>
+                <button class="toggle-btn" onclick="toggleInfo('yeinerProposal1')">Ver más</button>
+                <div class="extra-info" id="yeinerProposal1">
+                    <p>Se hará torneos por cada deporte como el fútbol, vóleibol, bastekbool, ajedrez y e.t.c. Se harán por categorías y por deportes, al equipo ganar se le va dar premios y reconocimientos. Los recursos para esta propuesta se sacaran con actividades económicas</p>
                 </div>
             </li>
             <li>
                 <strong>Organización y mejoramiento de los baños</strong>
-                <button class="toggle-btn" onclick="toggleInfo('proposal2')">Ver más</button>
-                <div class="extra-info" id="proposal2">
-                    <p>Con esta propuesta se busca una digna instalación en la institución</p>
-                    <br>
+                <button class="toggle-btn" onclick="toggleInfo('yeinerProposal2')">Ver más</button>
+                <div class="extra-info" id="yeinerProposal2">
+                    <p>Con esta propuesta se busca una digna instalación en la institución</p><br>
                     <h5>Baño hombres</h5>
-                    <p>En los baños de los hombres se  organizarán las puertas sueltas, habilitando y arreglando los orinales, poniendo espejo y el mejoramiento del lavamanos.</p>
-                    <br>
+                    <p>En los baños de los hombres se organizarán las puertas sueltas, habilitando y arreglando los orinales, poniendo espejo y el mejoramiento del lavamanos.</p><br>
                     <h5>Baño mujeres</h5>
                     <p>En los baños de las mujeres se organizaran las puertas, se pondrán espejos, se organizarán los inodoros dañados y se pondrá una caja con toallas hingenicas y papel higiénico</p>
                 </div>
             </li>
             <li>
                 <strong>Recuperación de los espacios recreativos</strong>
-                <button class="toggle-btn" onclick="toggleInfo('proposal3')">Ver más</button>
-                <div class="extra-info" id="proposal3">
+                <button class="toggle-btn" onclick="toggleInfo('yeinerProposal3')">Ver más</button>
+                <div class="extra-info" id="yeinerProposal3">
                     <p>En esta propuesta se busca recuperar espacios recreativos, como las canchas, para ser utilizados en juegos como el vóleibol, el fútbol y el baloncesto. Además, se fomentará el uso de los recursos deportivos disponibles, como balones y redes de vóleibol, promoviendo una sana recreación. En los espacios comunes, como los bloques de salones, jardines y corredores, se habilitarán áreas donde los estudiantes podrán reunirse y compartir con sus grupos de amigos.</p>
                 </div>
             </li>
             <li>
                 <strong>Fiesta de disfraces</strong>
-                <button class="toggle-btn" onclick="toggleInfo('proposal4')">Ver más</button>
-                <div class="extra-info" id="proposal4">
+                <button class="toggle-btn" onclick="toggleInfo('yeinerProposal4')">Ver más</button>
+                <div class="extra-info" id="yeinerProposal4">
                     <p>En esta propuesta, el 31 de octubre todos podrán venir disfrazados con su mejor atuendo. Se realizará un concurso para premiar al mejor disfraz, y, de igual manera, habrá una celebración con una miniteca.</p>
                 </div>
             </li>
             <li>
                 <strong>Medio ambiente</strong>
-                <button class="toggle-btn" onclick="toggleInfo('proposal5')">Ver más</button>
-                <div class="extra-info" id="proposal5">
+                <button class="toggle-btn" onclick="toggleInfo('yeinerProposal5')">Ver más</button>
+                <div class="extra-info" id="yeinerProposal5">
                     <p>Con esta propuesta, se buscará promover una educación ecológica mediante concursos de recaudación de tapas, basuras y ecoplásticos. De esta manera, los estudiantes se motivarán a reciclar y podrán obtener ganancias a partir de estas recaudaciones. </p>
                 </div>
             </li>
@@ -78,39 +75,109 @@
     <section class="expandable-section">
         <div class="content-wrapper">
             <div class="image-container">
-                <img src="img/sullivan.png" alt="Imagen grande" class="big-image">
-                <button class="toggle-info" onclick="toggleBiography()">
+                <img id="yeinerImage" src="img/sullivan.png" alt="Imagen grande" class="big-image">
+                <button class="toggle-info" onclick="toggleYeinerBiography()">
                     <span class="arrow">➡️</span> Conóceme más
                 </button>
             </div>
-            <div class="biography" id="biography">
+            <div class="biography" id="yeinerBiography">
                 <p>Soy Yeiner Henao, un líder con visión y compromiso para mejorar nuestra comunidad educativa. He sido estudiante de esta institución durante siete años y estoy completamente agradecido. Por eso, me postulo a la personería para devolverle todo lo que ha hecho por mí. Quiero mejorar nuestro colegio para su bienestar y lograr que, en lugar de ser un impedimento para nuestra felicidad, se convierta en la fortaleza que nos impulse a alcanzar nuestros sueños.</p>
             </div>
         </div>
     </section>
 
-    <!-- Minijuegos interactivos mejorados -->
-<section class="game-section">
-    <h2>¡Diviertete un momento!</h2>
-    <p>Toca el círculo rojo lo más rápido posible cuando aparezca.</p>
-    <div id="game-container">
-        <div id="target"></div>
-    </div>
-    <p id="score">Puntuación: 0</p>
-    <div id="game-over">
-        <h2>¡Perdiste!</h2>
-        <button onclick="restartGame()">Volver a jugar</button>
-    </div>
-</section>
+    <section class="profile">
+        <div class="profile-image">
+            <img src="img/imagen6.jfif" alt="Sullivan de Monsters Inc.">
+        </div>
+        <div class="bio">
+            <h2>Eliezer Giraldo</h2>
+            <p>Mi nombre es Eliezer Giraldo y soy aspirante a la Contraloría 2025. Mi objetivo es convertirme en contralor para asegurar que las decisiones tomadas sean acertadas y que los recursos económicos se destinen a las necesidades más apremiantes de nuestra institución. Además, me gustaría dejar una huella y un legado que sirva de inspiración para futuros contralores. Busco establecer una visión a futuro que permita a los nuevos integrantes de nuestra institución llevarse la mejor impresión de nosotros.</p>
+        </div>
+        <div class="side-image">
+            <img src="img/imagen4png.png" alt="Imagen de Sulley">
+        </div>
+    </section>
 
-<section class="game-section">
-    <h2>¡Prueba tus reflejos!</h2>
-    <p>Presiona el botón lo más rápido posible cuando se ilumine.</p>
-    <button id="reaction-button" disabled>Espera...</button>
-    <p id="reaction-result"></p>
-</section>
-   
+    <section class="proposals">
+        <h2>Mis Propuestas (Eliezer)</h2>
+        <ul>
+            <li>
+                <strong>Mejora de los baños</strong>
+                <button class="toggle-btn" onclick="toggleInfo('eliezerProposal1')">Ver más</button>
+                <div class="extra-info" id="eliezerProposal1">
+                    <p>Impulsaremos una renovación integral de los baños, priorizando la higiene, funcionalidad y accesibilidad universal. Implementaremos un plan de mejoras con materiales duraderos y de fácil mantenimiento. Para financiarlo, organizaremos eventos comunitarios como 'Jean Days' y peliculas, asegurando la transparencia en la gestión de los recursos y la participación activa de la comunidad.</p>
+                </div>
+            </li>
+            <li>
+                <strong>Donación de útiles escolares:</strong>
+                <button class="toggle-btn" onclick="toggleInfo('eliezerProposal2')">Ver más</button>
+                <div class="extra-info" id="eliezerProposal2">
+                    <p>Lanzaremos un programa de donación de útiles escolares, fomentando la colaboración entre estudiantes, profesores y padres. Estableceremos puntos de recolección estratégicos y garantizaremos una distribución equitativa basada en las necesidades reales de los estudiantes. Buscaremos alianzas con proveedores locales para maximizar el impacto del programa.</p>
+                </div>
+            </li>
+            <li>
+                <strong>Sistema de sugerencias</strong>
+                <button class="toggle-btn" onclick="toggleInfo('eliezerProposal3')">Ver más</button>
+                <div class="extra-info" id="eliezerProposal3">
+                    <p>Estableceremos un sistema de sugerencias digital y presencial, permitiendo a los estudiantes proponer el destino de los recursos escolares con transparencia y responsabilidad. Organizaremos foros de discusión para analizar las propuestas y seleccionar las soluciones más viables y económicas, promoviendo la participación activa en la toma de decisiones.</p>
+                </div>
+            </li>
+            <li>
+                <strong>Día de juegos y torneos</strong>
+                <button class="toggle-btn" onclick="toggleInfo('eliezerProposal4')">Ver más</button>
+                <div class="extra-info" id="eliezerProposal4">
+                    <p>Organizaremos un día de juegos y torneos deportivos con premios, promoviendo la convivencia, el espíritu de equipo y la actividad física. Buscaremos la participación de toda la comunidad educativa, incluyendo estudiantes, profesores y personal administrativo. Implementaremos un sistema de puntuación justo y transparente, y fomentaremos el respeto y la deportividad entre los participantes.</p>
+                </div>
+            </li>
+            <li>
+                <strong>Visión Financiera a Largo Plazo</strong>
+                <button class="toggle-btn" onclick="toggleInfo('eliezerProposal5')">Ver más</button>
+                <div class="extra-info" id="eliezerProposal5">
+                    <p>Desarrollaré una estrategia financiera integral, con visión a largo plazo, que asegure la estabilidad económica de la institución. Esta estrategia se enfocará en la planificación presupuestaria proyectada, la diversificación de fuentes de ingresos, la optimización del gasto, la inversión estratégica en infraestructura y tecnología, y la transparencia en la gestión de recursos, garantizando así la sostenibilidad y el crecimiento continuo de la institución.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
 
-    
+    <section class="expandable-section">
+        <div class="content-wrapper">
+            <div class="image-container">
+                <img id="eliezerImage" src="img/imagen5.jpg" alt="Imagen grande" class="big-image">
+                <button class="toggle-info" onclick="toggleEliezerBiography()">
+                    <span class="arrow">➡️</span> Conóceme más
+                </button>
+            </div>
+            <div class="biography" id="eliezerBiography">
+                <p>Soy Eliezer Giraldo, una persona comprometida y cumplidora que siempre busca la manera de llevar todos sus proyectos a cabo. Aspiro a la Contraloría porque, cuando llegué al colegio, me recibieron con los brazos abiertos y valoro mucho eso. Me gustaría poner todo mi esfuerzo físico y mental, junto a mi disciplina y constancia, a favor de la institución para lograr grandes cosas y marcar una era donde los contralores sean más importantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-section">
+        <h2>¡Diviertete un momento!</h2>
+        <p>Toca el círculo verde lo más rápido posible cuando aparezca evitando los rojos para no perder.</p>
+        <div id="game-container">
+            <div id="target"></div>
+            <div id="time-left"></div> </div>
+        <p id="score">Puntuación: 0</p>
+        <div id="game-over">
+            <h2>¡Perdiste!</h2>
+            <button onclick="restartGame()">Volver a jugar</button>
+        </div>
+    </section>
+
+    <section class="suggestion-box">
+        <h2>¡Comparte tus Ideas!</h2>
+        <p>Tu opinión es importante para nosotros. ¡Déjanos tus sugerencias!</p>
+        <form id="suggestion-form">
+            <div class="input-container">
+                <textarea id="suggestion-text" placeholder="Escribe tu sugerencia aquí"></textarea>
+                <button type="submit" class="send-button">
+                    <i class="fab fa-whatsapp"></i> Enviar a WhatsApp
+                </button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
